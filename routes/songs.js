@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     .then(songs => {
       res.status(200).send(song);
     })
-    .catch(err => {
+    .catchs(err => {
     res.status(500).send(err);
   })
   ;

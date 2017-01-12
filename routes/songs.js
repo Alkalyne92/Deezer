@@ -21,4 +21,15 @@ router.get('/', (req, res) => {
   ;
 });
 
+router.get('/:id', (req, res) => {
+  SongService.findById(req.params.id)
+    .then(songs => {
+      res.status(200).send(song);
+    })
+    .catch(err => {
+    res.status(500).send(err);
+  })
+  ;
+});
+
 module.exports = router;

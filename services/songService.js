@@ -19,3 +19,7 @@ exports.create = (song) => {
     })
   ;
 };
+
+exports.findById = id => {
+  return db.Songs.findById(id);
+};
